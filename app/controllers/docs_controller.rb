@@ -10,11 +10,11 @@ class DocsController < ApplicationController
   end
 #for view
   def new
-    @doc = Doc.new
+    @doc = current_user.docs.build
   end
 #method to create, but does not have view
   def create
-    @doc = Doc.new(doc_params)
+    @doc = current_user.docs.build(doc_params)
 
     if @doc.save
       redirect_to @doc
