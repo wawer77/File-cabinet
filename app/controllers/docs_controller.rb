@@ -23,14 +23,21 @@ class DocsController < ApplicationController
       render 'new'
     end
   end
-
+#edit is for view file
   def edit
   end
 #does not have a view
   def update
+    if @doc.update(doc_params)
+      redirect_to @doc
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @doc.destroy
+    redirect_to docs_path
   end
 
 #prive so they are applied above but are not shown? to reduce redundancy
