@@ -1,2 +1,18 @@
-%h1 This is a placeholder
-= link_to "All documents", docs_path
+#banner
+  .banner_content
+    %h1 File Cabinet
+    %p Your life's work. Organised, alwyas.
+    %button= link_to "Enter", new_user_registration_path
+
+#callouts
+  .callouts_inner
+    .wrapper
+      .callout
+        %h2 Organize
+        %p W przeciwieństwie do rozpowszechnionych opinii, Lorem Ipsum nie jest tylko przypadkowym tekstem. Ma ono korzenie w klasycznej łacińskiej literaturze z 45 roku przed Chrystusem, czyli ponad 2000 lat temu! Richard McClintock, wykładowca łaciny na uniwersytecie Hampden-Sydney w Virginii, przyjrzał się uważniej jednemu z najbardziej niejasnych słów w Lorem Ipsum – consectetur – i po wielu poszukiwan
+
+        #bottom_cta
+          .wrapper
+            %h2 Go Ahead
+            %br
+            %button= link_to "Join Now", new_user_registration_path
